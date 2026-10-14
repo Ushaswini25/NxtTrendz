@@ -1,0 +1,250 @@
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.order-total-value {
+  color: #171f46;
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .order-total-value {
+    font-size: 32px;
+  }
+}
+
+.order-total-label {
+  color: #616e7c;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .order-total-label {
+    font-size: 24px;
+  }
+}
+
+.total-items {
+  color: #616e7c;
+  font-family: 'Roboto';
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .total-items {
+    font-size: 16px;
+  }
+}
+
+.checkout-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .d-lg-none {
+    display: none;
+  }
+}
+
+.modal-overlay-container {
+  background-color: rgba(15, 23, 42, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Central Popup Card Container */
+.modal-content-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 440px;
+  position: relative;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Close Icon Button */
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #94a3b8;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-heading {
+  font-size: 20px;
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Payment Selector Form Controls */
+.payment-options-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Disabled Option States */
+.disabled-option {
+  background-color: #f8fafc;
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.disabled-option input[type='radio'] {
+  cursor: not-allowed;
+}
+
+/* Cash On Delivery Option States */
+.active-option {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.active-option:hover {
+  border-color: #0b69ff;
+  background-color: #f0f7ff;
+}
+
+/* Order Summary Box Inside Popup */
+.popup-order-summary {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 20px 0;
+  border: 1px solid #f1f5f9;
+}
+
+.summary-title {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.summary-total-row {
+  font-weight: 700;
+  color: #171f46;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.confirm-order-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #10b981;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-order-button:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.confirm-order-button:disabled {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.success-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 12px 0;
+  text-align: center;
+}
+
+.success-text {
+  font-size: 16px;
+  color: #047857;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.close-success-btn {
+  padding: 10px 24px;
+  background-color: #334155;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.close-success-btn:hover {
+  background-color: #1e293b;
+}
